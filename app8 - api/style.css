@@ -1,0 +1,15 @@
+.header {
+  font-weight: bold;
+}
+
+.column > span {
+  width: 30%;
+  display: inline-block;
+}
+
+/*
+Doesn't work
+li {
+  text-decoration:none;
+}
+*/

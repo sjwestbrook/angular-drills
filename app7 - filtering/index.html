@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html ng-app="">
+<html ng-app="myApp">
 <head>
   <meta charset="utf-8">
   <link href="" rel="stylesheet" type="text/css">
   <title></title>
 </head>
 
-<body ng-controller="">
+<body ng-controller="mainCtrl">
 
+  <input ng-model="empl"></input>
 
-
+  <li ng-repeat="employee in employees | filter:empl">
+    <span>{{employee.name}}</span>
+    <span>{{employee.email}}</span>
+    <span>{{employee.dateEmployed}}</span>
+    <span>{{employee.phone}}</span>
+  </li>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
   <script src="app.js"></script>
