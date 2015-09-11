@@ -1,6 +1,27 @@
-<html>
-	<body>
-		Something
+<html ng-app='arrayApp'>
+	<head>
+		<link href="style.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body ng-controller="arrayController">
+
+			<!--
+				create an input box
+					-use ng-model to store the value 'daFilter'
+				on ng-repeat use 'daFilter'
+			-->
+
+		<input ng-model="daFilter"></input>
+
+
+		<li ng-repeat="employee in employees | filter:daFilter" class="row"> <!-- pipe with filter: piping the data along the process -->
+				<span class="personData">{{employee.name}}</span>
+				<span class="personData">{{employee.email}}</span>
+				<span class="personData">{{employee.dateEmployed}}</span>
+				<span class="personData">{{employee.phone}}</span>
+		</li>
+
+
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
